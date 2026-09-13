@@ -1,11 +1,16 @@
 server:
-  port: 5002
+  port: 5014
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/airline_db
+    url: jdbc:mysql://localhost:3306/airline_booking_db
     username: myprojects
     password: myprojects
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: booking-service-group
 
 eureka:
   client:
